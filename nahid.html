@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Nəzrin üçün 8 Mart - Ən Xüsusi</title>
+    <style>
+        /* ===== SUPER ROMANTİK FONTLAR ===== */
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Great+Vibes:wght@400;700&family=Sacramento&family=Parisienne&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Playfair Display', serif;
+            overflow-x: hidden;
+            background: #fce4ec;
+        }
+
+        /* ===== SƏHİFƏ 1 - AÇILIŞ (ÇOX ROMANTİK) ===== */
+        .page1 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: radial-gradient(circle at 30% 30%, #ffb6c1, #ffc0cb, #ffd9e8, #ffe4ec, #fff0f5);
+            background-size: 500% 500%;
+            animation: gradientFlow 12s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 20;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+            padding: 16px;
+        }
+
+        .page1.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        @keyframes gradientFlow {
+            0% { background-position: 0% 0%; }
+            25% { background-position: 100% 0%; }
+            50% { background-position: 100% 100%; }
+            75% { background-position: 0% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+
+        .page1-content {
+            max-width: 850px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 5px solid rgba(255, 215, 0, 0.9);
+            border-radius: 90px 90px 220px 220px;
+            padding: 50px 30px;
+            text-align: center;
+            color: #590d2b;
+            box-shadow: 0 50px 80px rgba(0, 0, 0, 0.4), 0 0 0 18px rgba(255, 105, 180, 0.3);
+            animation: appear 1.3s ease-out;
+        }
+
+        @keyframes appear {
+            0% { opacity: 0; transform: scale(0.6) rotate(-3deg); }
+            100% { opacity: 1; transform: scale(1) rotate(0); }
+        }
+
+        .giant-emoji {
+            font-size: clamp(5rem, 18vw, 8rem);
+            line-height: 1;
+            margin-bottom: 20px;
+            animation: rotateSlow 16s linear infinite;
+            display: inline-block;
+            filter: drop-shadow(0 15px 20px #ff1493);
+        }
+
+        @keyframes rotateSlow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .page1 h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(4rem, 12vw, 6rem);
+            margin: 20px 0;
+            text-shadow: 4px 4px 0 #ff1493, 8px 8px 25px gold;
+            color: #7a1f42;
+            letter-spacing: 2px;
+        }
+
+        .page1 p {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(2.2rem, 7vw, 3.2rem);
+            margin: 30px 0;
+            line-height: 1.6;
+            color: #3a1c2a;
+        }
+
+        .page1 .start-btn {
+            background: linear-gradient(145deg, #ffd700, #ff1493, #ff69b4);
+            border: 6px solid white;
+            color: white;
+            font-family: 'Sacramento', cursive;
+            font-size: clamp(3.2rem, 10vw, 5rem);
+            font-weight: 900;
+            padding: 25px 55px;
+            border-radius: 100px;
+            box-shadow: 0 25px 50px rgba(255, 20, 147, 0.7);
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 35px 0 20px;
+            width: 100%;
+            max-width: 500px;
+            letter-spacing: 4px;
+            text-shadow: 3px 3px 0 #b22b6b;
+        }
+
+        .page1 .start-btn:active {
+            transform: scale(0.9);
+            box-shadow: 0 10px 30px gold;
+        }
+
+        /* ===== SƏHİFƏ 2 - NƏZRİN ÜÇÜN SUPER ROMANTİK ===== */
+        .page2 {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #fff5f8, #ffe4ec, #ffd9f0, #ffcce6, #fff0fa);
+            background-size: 500% 500%;
+            animation: gradientWave 18s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        @keyframes gradientWave {
+            0% { background-position: 0% 0%; }
+            33% { background-position: 100% 50%; }
+            66% { background-position: 50% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+
+        /* Uçan ürəklər */
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 5;
+            overflow: hidden;
+        }
+
+        .float-item {
+            position: absolute;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            opacity: 0.6;
+            color: #ff99cc;
+            animation: floatUp 12s linear infinite;
+            text-shadow: 0 0 20px gold;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(110vh) rotate(0deg) scale(0.3); opacity: 0; }
+            20% { opacity: 0.9; transform: translateY(90vh) rotate(120deg) scale(1); }
+            80% { opacity: 0.9; transform: translateY(20vh) rotate(240deg) scale(1.2); }
+            100% { transform: translateY(-20vh) rotate(360deg) scale(0.5); opacity: 0; }
+        }
+
+        /* Əsas kart */
+        .nezrin-card {
+            max-width: 1100px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 100px 100px 200px 200px;
+            padding: 60px 30px;
+            box-shadow: 0 60px 100px rgba(199, 21, 133, 0.5), 0 0 0 12px gold, 0 0 0 24px #ffb6c1;
+            border: 8px solid white;
+            animation: cardFloat 5s ease infinite;
+            position: relative;
+            z-index: 10;
+            margin: 40px auto;
+        }
+
+        @keyframes cardFloat {
+            0%, 100% { transform: translateY(0) rotate(0deg); box-shadow: 0 60px 100px rgba(199, 21, 133, 0.5), 0 0 0 12px gold, 0 0 0 24px #ffb6c1; }
+            50% { transform: translateY(-15px) rotate(0.5deg); box-shadow: 0 80px 120px #ff1493, 0 0 0 16px gold, 0 0 0 30px #ff99cc; }
+        }
+
+        /* NƏZRİN adı - Nəhəng və Romantik */
+        .nezrin-name {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(5rem, 22vw, 14rem);
+            text-align: center;
+            color: #9b1d4b;
+            text-shadow: 6px 6px 0 gold, 12px 12px 30px #ff69b4, 18px 18px 40px rgba(255,20,147,0.3);
+            margin: 10px 0;
+            animation: nameGlowSuper 3s ease infinite;
+            line-height: 0.9;
+            word-break: break-word;
+            letter-spacing: 5px;
+        }
+
+        @keyframes nameGlowSuper {
+            0%, 100% { text-shadow: 6px 6px 0 gold, 12px 12px 30px #ff69b4, 18px 18px 40px rgba(255,105,180,0.3); }
+            50% { text-shadow: 10px 10px 0 gold, 18px 18px 50px #ff1493, 24px 24px 60px gold; }
+        }
+
+        /* 8 Mart başlığı */
+        .mart-super {
+            font-size: clamp(4rem, 15vw, 9rem);
+            text-align: center;
+            font-family: 'Sacramento', cursive;
+            font-weight: 900;
+            background: linear-gradient(135deg, #c2185b, gold, #d81b60, #ff69b4, #c2185b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 10px 0;
+            animation: shineSuper 6s linear infinite;
+            letter-spacing: 8px;
+        }
+
+        @keyframes shineSuper {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 200% 0%; }
+        }
+
+        .sub-mart {
+            font-size: clamp(2rem, 6vw, 3rem);
+            text-align: center;
+            color: #b22b6b;
+            font-family: 'Dancing Script', cursive;
+            border-bottom: 4px double gold;
+            border-top: 4px double gold;
+            padding: 20px 10px;
+            margin: 20px 0 30px;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 60px;
+            font-weight: 700;
+            box-shadow: inset 0 0 40px #ffd9e8;
+        }
+
+        /* SUPER ROMANTİK MESAJ */
+        .romantic-message {
+            background: linear-gradient(145deg, rgba(255, 240, 250, 0.9), rgba(255, 220, 240, 0.9));
+            border-radius: 80px 80px 150px 150px;
+            padding: 60px 30px;
+            margin: 50px 0;
+            border: 6px double gold;
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            line-height: 2;
+            text-align: center;
+            color: #2d1b2d;
+            box-shadow: inset 0 0 100px #ffb6c1, 0 30px 50px rgba(255,20,147,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .romantic-message::before {
+            content: "💕";
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            font-size: 100px;
+            opacity: 0.1;
+            transform: rotate(-15deg);
+        }
+
+        .romantic-message::after {
+            content: "💖";
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            font-size: 100px;
+            opacity: 0.1;
+            transform: rotate(15deg);
+        }
+
+        .romantic-message strong {
+            font-size: clamp(3rem, 9vw, 4.5rem);
+            color: #b0306e;
+            font-family: 'Great Vibes', cursive;
+            display: block;
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 0 gold;
+        }
+
+        .highlight-romantic {
+            background: linear-gradient(120deg, #ffd9e8, #fff9c4, #ffd9e8);
+            padding: 10px 30px;
+            border-radius: 60px;
+            font-weight: 900;
+            color: #9b1d4b;
+            display: inline-block;
+            margin: 20px 0;
+            font-size: clamp(2.2rem, 7vw, 3.2rem);
+            border: 3px solid gold;
+            box-shadow: 0 10px 30px rgba(255,20,147,0.4);
+        }
+
+        .big-heart {
+            font-size: clamp(3.5rem, 12vw, 6rem);
+            margin: 25px 0;
+            animation: heartBeat 1.5s ease infinite;
+            display: inline-block;
+        }
+
+        @keyframes heartBeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.4); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Şəkil qalereyası */
+        .gallery-romantic {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 60px 0;
+        }
+
+        .frame-romantic {
+            width: 200px;
+            height: 250px;
+            border-radius: 50% 30% 50% 30%;
+            border: 10px solid gold;
+            overflow: hidden;
+            box-shadow: 0 35px 60px rgba(255,20,147,0.5);
+            transform: rotate(calc(var(--rot) * 1deg));
+            animation: frameFloat 7s ease infinite;
+            transition: 0.5s;
+        }
+
+        .frame-romantic:nth-child(1) { --rot: -6; animation-delay: 0s; }
+        .frame-romantic:nth-child(2) { --rot: 5; animation-delay: 1s; }
+        .frame-romantic:nth-child(3) { --rot: -4; animation-delay: 2s; }
+
+        @keyframes frameFloat {
+            0%, 100% { transform: rotate(calc(var(--rot) * 1deg)) translateY(0); border-color: gold; }
+            50% { transform: rotate(calc(var(--rot) * 0.3deg)) translateY(-20px) scale(1.05); border-color: #ff1493; }
+        }
+
+        .frame-romantic:hover {
+            transform: scale(1.2) rotate(0deg);
+            z-index: 100;
+        }
+
+        .frame-romantic img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Turqandan Nəzrinə SUPER ROMANTİK FINAL */
+        .from-turqan-romantic {
+            text-align: center;
+            background: radial-gradient(circle at 30% 30%, gold, #ff1493, #ff69b4, gold);
+            padding: 60px 30px;
+            border-radius: 200px 200px 100px 100px;
+            margin: 70px 0 40px;
+            color: white;
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.8rem, 8vw, 4.5rem);
+            border: 10px solid white;
+            box-shadow: 0 50px 80px rgba(0,0,0,0.4);
+            animation: footerRomantic 7s ease infinite;
+            text-shadow: 4px 4px 0 #a13165;
+        }
+
+        @keyframes footerRomantic {
+            0%, 100% { border-radius: 200px 200px 100px 100px; background: radial-gradient(circle at 30% 30%, gold, #ff1493, #ff69b4); }
+            50% { border-radius: 100px 100px 200px 200px; background: radial-gradient(circle at 70% 70%, #ff1493, gold, #ff69b4); }
+        }
+
+        .from-turqan-romantic span {
+            font-size: clamp(4rem, 14vw, 7rem);
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .from-turqan-romantic small {
+            font-size: clamp(2rem, 6vw, 3rem);
+            display: block;
+            margin-top: 20px;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        /* Çiçək sıraları */
+        .flower-row-romantic {
+            display: flex;
+            justify-content: center;
+            gap: 15px 30px;
+            font-size: clamp(3rem, 10vw, 5rem);
+            margin: 30px 0 15px;
+            flex-wrap: wrap;
+        }
+
+        .flower-row-romantic span {
+            animation: bounceRomantic 2.5s ease infinite;
+            filter: drop-shadow(0 10px 20px #ff69b4);
+        }
+        .flower-row-romantic span:nth-child(1) { animation-delay: 0s; }
+        .flower-row-romantic span:nth-child(2) { animation-delay: 0.4s; }
+        .flower-row-romantic span:nth-child(3) { animation-delay: 0.8s; }
+        .flower-row-romantic span:nth-child(4) { animation-delay: 1.2s; }
+        .flower-row-romantic span:nth-child(5) { animation-delay: 1.6s; }
+
+        @keyframes bounceRomantic {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            40% { transform: translateY(-35px) rotate(15deg); }
+        }
+
+        .final-date {
+            text-align: center;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            color: #b0306e;
+            margin-top: 30px;
+            font-family: 'Dancing Script', cursive;
+            text-shadow: 1px 1px 0 gold;
+        }
+
+        /* Audio */
+        #bg-music {
+            display: none;
+        }
+
+        /* Konfeti */
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 100;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Audio - Mahnı (ÖZ MP3 LİNKİNİZİ ƏLAVƏ EDİN) -->
+    <audio id="bg-music" loop playsinline>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-15.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Uçan elementlər -->
+    <div class="floating-elements" id="floating-elements"></div>
+
+    <!-- Konfeti canvas -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <!-- SƏHİFƏ 1 - AÇILIŞ -->
+    <div class="page1" id="page-1">
+        <div class="page1-content">
+            <div class="giant-emoji">💕🌷💕</div>
+            <h1>Xüsusi Təbrik</h1>
+            <p>8 Mart üçün ən xüsusi sürpriz...<br>Ən xüsusi insan üçün 💘</p>
+            <p style="font-size: clamp(2rem, 6vw, 2.8rem);">Hazırsanmı, Nəzrin?</p>
+            <button class="start-btn" id="start-btn">Başlayaq :)</button>
+            <div class="giant-emoji" style="margin-top: 20px;">🌸💖🌼</div>
+        </div>
+    </div>
+
+    <!-- SƏHİFƏ 2 - NƏZRİN ÜÇÜN ROMANTİK -->
+    <div class="page2" id="page-2" style="display: none;">
+        <div class="nezrin-card">
+            
+            <!-- Üst çiçəklər -->
+            <div class="flower-row-romantic">
+                <span>🌹</span> <span>🌺</span> <span>🌸</span> <span>🌷</span> <span>🌼</span>
+            </div>
+
+            <!-- NƏZRİN - Nəhəng ad -->
+            <h1 class="nezrin-name">Nəzrin</h1>
+
+            <!-- 8 Mart başlıq -->
+            <div class="mart-super">8 MART</div>
+            <div class="sub-mart">Beynəlxalq Qadınlar Günün Mübarək!</div>
+
+            <!-- SUPER ROMANTİK MESAJ (çox xüsusi) -->
+            <div class="romantic-message">
+                <strong>✨ Əziz Nəzrin! ✨</strong>
+                
+                <span class="highlight-romantic">Sən çox xüsusi birisən!</span>
+                
+                <br><br>
+                Sənin kimi gözəl, mehriban və dəyərli bir insanı tanıdığım üçün 
+                özümü çox şanslı hiss edirəm.
+                
+                <br><br>
+                Gülüşün günümü işıqlandırır, varlığın həyatıma rəng qatır.
+                
+                <br><br>
+                Bu gözəl gündə sənə sonsuz xoşbəxtlik, sevgi, 
+                uğurlar və həyatın ən gözəl sürprizlərini arzulayıram.
+                
+                <br><br>
+                <span class="big-heart">💗 HƏR ZAMAN XOŞBƏXT OL! 💗</span>
+                
+                <br><br>
+                Hər zaman gül, hər zaman parla, 
+                çünki sən buna layiq olan ən gözəl insansan! 
+            </div>
+
+            <!-- Şəkillər -->
+            <div class="gallery-romantic">
+                <div class="frame-romantic">
+                    <img src="https://cdn.pixabay.com/photo/2017/02/15/12/21/flower-2068494_640.jpg" alt="Gözəllik">
+                </div>
+                <div class="frame-romantic">
+                    <img src="https://cdn.pixabay.com/photo/2016/06/17/23/04/rose-1464119_640.jpg" alt="Sevgi">
+                </div>
+                <div class="frame-romantic">
+                    <img src="https://cdn.pixabay.com/photo/2018/03/16/17/34/tulip-3232535_640.jpg" alt="Nəzakət">
+                </div>
+            </div>
+
+            <!-- Turqandan Nəzrinə - ROMANTİK FINAL -->
+            <div class="from-turqan-romantic">
+                <span>💘 Turqadan 💘</span>
+                Xüsusi insan Nəzrinə
+                <small>8 Mart təbriki ilə, ən gözəl arzularla...</small>
+            </div>
+
+            <!-- Alt çiçəklər -->
+            <div class="flower-row-romantic">
+                <span>🌸</span> <span>🌼</span> <span>🌻</span> <span>🌺</span> <span>🌷</span>
+            </div>
+
+            <!-- Tarix -->
+            <div class="final-date">
+                ✨ 8 MART 2026 ✨
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            // Elementləri seç
+            const page1 = document.getElementById('page-1');
+            const page2 = document.getElementById('page-2');
+            const startBtn = document.getElementById('start-btn');
+            const audio = document.getElementById('bg-music');
+            const floatingContainer = document.getElementById('floating-elements');
+            const confettiCanvas = document.getElementById('confetti-canvas');
+
+            // Uçan elementləri yarat (ürəklər çox olsun)
+            function createFloatingItems() {
+                if (!floatingContainer) return;
+                const items = ['💕', '💖', '💗', '💓', '💘', '💝', '🌸', '🌺', '🌷', '✨', '💫'];
+                for (let i = 0; i < 30; i++) {
+                    const div = document.createElement('div');
+                    div.className = 'float-item';
+                    div.innerHTML = items[Math.floor(Math.random() * items.length)];
+                    div.style.left = Math.random() * 100 + '%';
+                    div.style.fontSize = (Math.random() * 40 + 20) + 'px';
+                    div.style.animationDelay = Math.random() * 10 + 's';
+                    div.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                    floatingContainer.appendChild(div);
+                }
+            }
+
+            // Konfeti
+            function startConfetti() {
+                if (!confettiCanvas) return;
+                const ctx = confettiCanvas.getContext('2d');
+                confettiCanvas.width = window.innerWidth;
+                confettiCanvas.height = window.innerHeight;
+                confettiCanvas.style.display = 'block';
+
+                const particles = [];
+                const colors = ['#FFD700', '#FF69B4', '#FF1493', '#FFB6C1', '#FFA500', '#DA70D6', '#FF69B4', '#FF1493'];
+
+                for (let i = 0; i < 200; i++) {
+                    particles.push({
+                        x: Math.random() * confettiCanvas.width,
+                        y: Math.random() * confettiCanvas.height,
+                        size: Math.random() * 15 + 5,
+                        color: colors[Math.floor(Math.random() * colors.length)],
+                        speedY: Math.random() * 6 + 3,
+                        speedX: (Math.random() - 0.5) * 4,
+                        rotation: Math.random() * 360
+                    });
+                }
+
+                function animate() {
+                    if (!confettiCanvas || confettiCanvas.style.display === 'none') return;
+                    ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+                    
+                    particles.forEach(p => {
+                        ctx.save();
+                        ctx.translate(p.x, p.y);
+                        ctx.rotate(p.rotation * Math.PI / 180);
+                        ctx.fillStyle = p.color;
+                        ctx.fillRect(-p.size/2, -p.size/2, p.size, p.size);
+                        ctx.restore();
+
+                        p.y += p.speedY;
+                        p.x += p.speedX;
+                        p.rotation += 3;
+
+                        if (p.y > confettiCanvas.height) {
+                            p.y = 0;
+                            p.x = Math.random() * confettiCanvas.width;
+                        }
+                    });
+                    
+                    requestAnimationFrame(animate);
+                }
+                animate();
+
+                // 8 saniyə sonra dayandır
+                setTimeout(() => {
+                    if (confettiCanvas) confettiCanvas.style.display = 'none';
+                }, 8000);
+            }
+
+            // Mahnını çal
+            function playMusic() {
+                if (!audio) return;
+                audio.volume = 0.6;
+
+                const playPromise = audio.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(() => {
+                        // Əgər bloklanıbsa, toxunmada çal
+                        const playOnTouch = function() {
+                            audio.play().catch(e => console.log('Səs xətası:', e));
+                            document.body.removeEventListener('click', playOnTouch);
+                            document.body.removeEventListener('touchstart', playOnTouch);
+                        };
+                        document.body.addEventListener('click', playOnTouch, { once: true });
+                        document.body.addEventListener('touchstart', playOnTouch, { once: true });
+                    });
+                }
+            }
+
+            // 2-ci səhifəyə keç
+            function goToPage2() {
+                if (!page1 || !page2) return;
+                page1.classList.add('hidden');
+                page2.style.display = 'flex';
+                startConfetti();
+                playMusic();
+            }
+
+            // Səhifə yüklənəndə
+            window.addEventListener('load', function() {
+                createFloatingItems();
+
+                if (audio) {
+                    audio.load();
+                    audio.play().catch(() => {});
+                }
+
+                if (startBtn) {
+                    startBtn.addEventListener('click', goToPage2);
+                    startBtn.addEventListener('touchstart', function(e) {
+                        e.preventDefault();
+                        goToPage2();
+                    }, { passive: false });
+                }
+
+                window.addEventListener('resize', function() {
+                    if (confettiCanvas && confettiCanvas.style.display === 'block') {
+                        confettiCanvas.width = window.innerWidth;
+                        confettiCanvas.height = window.innerHeight;
+                    }
+                });
+            });
+
+        })();
+    </script>
+</body>
+</html>
